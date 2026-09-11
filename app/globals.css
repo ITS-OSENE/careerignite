@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f6f8;
+  --foreground: #102033;
+  --navbar-foreground: #f4f6f8;
+  --navbar: #0b1f33;
+  --cards: #ffffff;
+  --primary-accent: #2c7a7b;
+  --light-accent: #dbe9e7;
+  --secondary-text: #5c6b7a;
+  --borders: #cbd5df;
+}
+
+[data-theme="overview"] {
+  --background: #f4f6f8;
+  --foreground: #102033;
+  --navbar-foreground: #f4f6f8;
+  --navbar: #0b1f33;
+  --cards: #ffffff;
+  --primary-accent: #2c7a7b;
+  --light-accent: #dbe9e7;
+  --secondary-text: #5c6b7a;
+  --borders: #cbd5df;
+}
+
+[data-theme="community"] {
+  --background: #f4f6f8;
+  --foreground: #102033;
+  --navbar-foreground: #f4f6f8;
+  --navbar: #0b1f33;
+  --cards: #ffffff;
+  --primary-accent: #2c7a7b;
+  --light-accent: #dbe9e7;
+  --secondary-text: #5c6b7a;
+  --borders: #cbd5df;
+}
+
+[data-theme="research"] {
+  --background: #f4f6f8;
+  --foreground: #102033;
+  --navbar-foreground: #f4f6f8;
+  --navbar: #0b1f33;
+  --cards: #ffffff;
+  --primary-accent: #2c7a7b;
+  --light-accent: #dbe9e7;
+  --secondary-text: #5c6b7a;
+  --borders: #cbd5df;
+}
+
+[data-theme="team"] {
+  --background: #f4f6f8;
+  --foreground: #102033;
+  --navbar-foreground: #f4f6f8;
+  --navbar: #0b1f33;
+  --cards: #ffffff;
+  --primary-accent: #2c7a7b;
+  --light-accent: #dbe9e7;
+  --secondary-text: #5c6b7a;
+  --borders: #cbd5df;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 360ms ease-out both;
+}
+
+[data-theme] > section:first-child {
+  color: var(--navbar-foreground);
+}
+
+/* Let older page utility classes inherit each page's palette. */
+[data-theme][class*="bg-slate-950"], [data-theme] [class*="bg-slate-950"],
+[data-theme][class*="bg-[#070B14"], [data-theme] [class*="bg-[#070B14"],
+[data-theme][class*="bg-[#070b19"], [data-theme] [class*="bg-[#070b19"],
+[data-theme][class*="bg-[#04060f"], [data-theme] [class*="bg-[#04060f"],
+[data-theme][class*="bg-[#10172A"], [data-theme] [class*="bg-[#10172A"],
+[data-theme][class*="bg-[#0f172a"], [data-theme] [class*="bg-[#0f172a"],
+[data-theme][class*="bg-cyan-950"], [data-theme] [class*="bg-cyan-950"] {
+  background-color: var(--navbar) !important;
+}
+
+[data-theme][class*="bg-slate-900"], [data-theme] [class*="bg-slate-900"],
+[data-theme][class*="bg-slate-800"], [data-theme] [class*="bg-slate-800"],
+[data-theme][class*="bg-indigo-950"], [data-theme] [class*="bg-indigo-950"],
+[data-theme][class*="bg-blue-950"], [data-theme] [class*="bg-blue-950"],
+[data-theme][class*="bg-neutral-800"], [data-theme] [class*="bg-neutral-800"],
+[data-theme][class~="bg-white"], [data-theme] [class~="bg-white"] {
+  background-color: var(--cards) !important;
+}
+
+[data-theme] [class*="text-white"], [data-theme] [class*="text-slate-100"],
+[data-theme] [class*="text-slate-200"], [data-theme] [class*="text-slate-300"],
+[data-theme] [class*="text-[#E2E8F0"], [data-theme] [class*="text-[#F8FAFC"] {
+  color: var(--foreground) !important;
+}
+
+[data-theme] [class*="text-slate-400"], [data-theme] [class*="text-slate-500"],
+[data-theme] [class*="text-[#94A3B8"], [data-theme] [class*="text-[#CBD5E1"] {
+  color: var(--secondary-text) !important;
+}
+
+[data-theme] [class*="bg-cyan-500"], [data-theme] [class*="bg-indigo-500"],
+[data-theme] [class*="bg-[#FF5722"], [data-theme] [class*="from-[#FF5722"],
+[data-theme] [class*="to-orange-600"] {
+  background-color: var(--primary-accent) !important;
+  background-image: none !important;
+}
+
+[data-theme] [class*="text-cyan-400"], [data-theme] [class*="text-indigo-400"],
+[data-theme] [class*="text-purple-400"], [data-theme] [class*="text-blue-400"],
+[data-theme] [class*="text-[#FF5722"] {
+  color: var(--primary-accent) !important;
+}
+
+[data-theme] [class*="text-[#EAB308"], [data-theme] [class*="text-amber-400"],
+[data-theme] [style*="#d68c8c"] {
+  color: var(--primary-accent) !important;
+}
+
+[data-theme] [class*="border-slate-"], [data-theme] [class*="border-[#334155"],
+[data-theme] [class*="border-[#1e293b"], [data-theme] [class*="border-cyan-"],
+[data-theme] [class*="border-indigo-"] {
+  border-color: var(--borders) !important;
+}
